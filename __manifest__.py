@@ -1,18 +1,25 @@
 # -*- coding: utf-8 -*-
 
 {
-    'name': 'Sale Mining',
-    'version': '1.0',
-    'author': 'Technoindo.com',
-    'category': 'Sales Management',
+    'name': 'POS Report Sale Person',
+    'category': 'sale',
+    'version': '0.1',
+    'summary': 'This module provides POS Report Sale Person',
+    'author': 'anonym',
+    'description': '''This module provides Extra Report(Receivable & Payable report and PoS report).''',
     'depends': [
-        'sale_contract',
-        'shipping',
-        'sale_qaqc',
-    ],
+        'base', 
+        'sale', 
+        'account', 
+        'pos_cashback', 
+        'point_of_sale'
+        ],
     'data': [
-        'views/menu.xml',
-        'views/qaqc_coa.xml',
+        'views/pos_view.xml',
+        'report/pos_temp.xml',
+        'report/pos_report.xml',
+        # 'views/menu.xml',
+        # 'views/qaqc_coa.xml',
     ],
     'qweb': [
         # 'static/src/xml/cashback_templates.xml',
@@ -20,7 +27,8 @@
     'demo': [
         # 'demo/sale_agent_demo.xml',
     ],
-    "installable": True,
-	"auto_instal": False,
-	"application": False,
+    'images': ['static/description/banner.png'],
+    'auto_install': False,
+    'installable': True,
+    'application': False,
 }
