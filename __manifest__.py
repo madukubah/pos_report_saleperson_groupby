@@ -11,7 +11,6 @@
         'base', 
         'sale', 
         'account', 
-        'pos_cashback', 
         'point_of_sale'
         ],
     'data': [

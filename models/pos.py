@@ -39,8 +39,7 @@ class PointOfSalePosReport(models.TransientModel):
                     temp_order['name'] = order.name
                     temp_order['date_order'] = order.date_order
                     # temp_order['partner_name'] = order.partner_id.name if order.partner_id else "UMUM"
-                    temp_order['amount_total'] = order.amount_total - order.amount_cashback
-                    temp_order['amount_cashback'] = order.amount_cashback
+                    temp_order['amount_total'] = order.amount_total
                     temp_order['orderlines'] = []
 
                     for order_line in order.lines:
