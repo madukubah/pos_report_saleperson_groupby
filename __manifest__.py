@@ -5,7 +5,7 @@
     'category': 'sale',
     'version': '0.1',
     'summary': 'This module provides POS Report Sale Person',
-    'author': 'anonym',
+    'author': 'Technoindo.com',
     'description': '''This module provides Extra Report(Receivable & Payable report and PoS report).''',
     'depends': [
         'base', 
@@ -18,8 +18,6 @@
         'views/pos_view.xml',
         'report/pos_temp.xml',
         'report/pos_report.xml',
-        # 'views/menu.xml',
-        # 'views/qaqc_coa.xml',
     ],
     'qweb': [
         # 'static/src/xml/cashback_templates.xml',
