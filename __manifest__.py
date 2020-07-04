@@ -8,9 +8,9 @@
     'author': 'Technoindo.com',
     'description': '''This module provides Extra Report(Receivable & Payable report and PoS report).''',
     'depends': [
-        'base', 
-        'sale', 
-        'account', 
+        'base',
+        'sale',
+        'account',
         'point_of_sale'
         ],
     'data': [

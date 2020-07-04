@@ -27,6 +27,7 @@
                         </h3>
                     </center>
                     <t t-foreach="data[user]" t-as="session">
+                        <t t-set="total_sum" t-value="0"/>
                         <h4>
                              <b>
                                 <span>Session :</span>
@@ -99,13 +100,30 @@
                                         <td class="text-right">
                                             <b>
                                                 <span t-esc="'{:,}'.format(order['amount_total'])"/>
+                                                <t t-set="total_sum" t-value="total_sum + order['amount_total'] "/>
                                             </b>
                                         </td>
                                     </tr>      
                                 </tbody>
                             </table>
                         </t>
+
+                        <div class="row">
+                            <div class="col-xs-4 pull-right">
+                                <table class="table table-condensed">
+                                    <tr>
+                                        <td><strong>Total / Session</strong></td>
+                                        <td class="text-right">
+                                            <span t-esc="'{:,}'.format(total_sum)"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <hr/>
                     </t>
+
+                    
                 </t>
             </div>
         </t>
