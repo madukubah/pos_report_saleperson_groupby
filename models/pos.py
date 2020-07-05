@@ -19,7 +19,7 @@ class PointOfSalePosReport(models.TransientModel):
         groupby_dict = {}
         for user in self.user_ids:
             user_pos_sessions = {}
-            pos_sessions = self.env['pos.session'].search([ ('user_id', '=', user.id), ('start_at', '>=', self.start_date), ('start_at', '<=', self.end_date), ('state', '=', 'closed' ) ], order="start_at desc")
+            pos_sessions = self.env['pos.session'].search([ ('user_id', '=', user.id), ('start_at', '>=', self.start_date), ('start_at', '<=', self.end_date), ('state', '=', 'closed' ) ], order="start_at asc")
             _logger.warning( pos_sessions )
 
             groupby_dict[user.name] = pos_sessions
