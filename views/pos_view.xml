@@ -23,8 +23,6 @@
                         <button string="Cancel" class="btn-default" special="cancel"/>
                     </footer>
                 </form>
-
-
             </field>
         </record>
 

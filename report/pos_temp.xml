@@ -19,6 +19,8 @@
                     </center>
                 </div>
                 <br/>
+                <t t-set="total_sum_all" t-value="0"/>
+
                 <t t-foreach="data.keys()" t-as="user">
                     <center>
                         <h3>
@@ -26,6 +28,7 @@
                             <span t-esc="user"/>
                         </h3>
                     </center>
+
                     <t t-foreach="data[user]" t-as="session">
                         <t t-set="total_sum" t-value="0"/>
                         <h4>
@@ -133,6 +136,7 @@
                                         <td><strong>Total / Session</strong></td>
                                         <td class="text-right">
                                             <span t-esc="'{:,}'.format(total_sum)"/>
+                                            <t t-set="total_sum_all" t-value="total_sum_all + total_sum "/>
                                         </td>
                                     </tr>
                                 </table>
@@ -141,6 +145,20 @@
                         <hr style="background-color:black; color:black" />
                     </t>
                 </t>
+
+                <div class="row">
+                    <div class="col-xs-4 pull-right">
+                        <table class="table table-condensed">
+                            <tr>
+                                <td><strong>Total All</strong></td>
+                                <td class="text-right">
+                                    <span t-esc="'{:,}'.format(total_sum_all)"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <hr style="background-color:black; color:black" />
             </div>
         </t>
     </template>
